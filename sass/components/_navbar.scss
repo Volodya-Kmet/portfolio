@@ -1,0 +1,35 @@
+nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    padding: 15vh 0 10vh;
+    z-index: 100;
+    .nav_div{
+        position: relative;
+        a {
+            border-radius: 0 7px 7px 0;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            background-image: $gradient;
+            padding: 1vh;
+            margin-bottom: 0.5vh;
+            text-decoration: none;
+            display: block;
+            .nav_icon{
+                font-size: 10px;
+                color: white;
+                text-align: center;
+                margin: 0;
+                i{
+                    font-size: 6vh;
+                }
+            }
+        }
+        a:hover{
+            background-image: $activegradient;
+            
+            p{
+                color: black;
+            }
+        }
+    }
+} 

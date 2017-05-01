@@ -1,0 +1,9 @@
+div {
+    float: left;
+    
+    
+    
+    &:after{
+        @include clear();
+    }
+}

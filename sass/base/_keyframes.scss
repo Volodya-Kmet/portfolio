@@ -1,0 +1,17 @@
+.svg_icon{
+                animation-name: animate;
+                animation-duration: 1s;
+                animation-timing-function: cubic-bezier(.51,.11,.85,.38);
+                animation-iteration-count: infinite;
+                
+                animation-direction: alternate;
+        }
+
+@-webkit-keyframes animate {
+    0% {
+        margin-top: 0.5vh;
+    }
+    100% {
+        margin-top: 3.5vh;
+    }
+}
