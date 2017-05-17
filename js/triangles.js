@@ -294,19 +294,19 @@ Licensed under the MIT license.
         , variance: 1.3
         , pattern: "x*y"
         , baseColor1: {
-            baseHue: 120
+            baseHue: 450
             , baseSaturation: 60
-            , baseLightness: 38
+            , baseLightness: 48
         }
         , baseColor2: {
-            baseHue: 120
+            baseHue: 450
             , baseSaturation: 60
-            , baseLightness: 40
+            , baseLightness: 50
         }
         , colorDelta: {
             hue: 1
-            , lightness: 0
-            , saturation: 0
+            , lightness: 1
+            , saturation: 1
         }
     });
 }());

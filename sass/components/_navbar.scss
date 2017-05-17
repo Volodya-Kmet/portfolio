@@ -1,35 +1,29 @@
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
-    display: flex;
-    padding: 15vh 0 10vh;
     z-index: 100;
-    .nav_div{
-        position: relative;
-        a {
-            border-radius: 0 7px 7px 0;
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            background-image: $gradient;
-            padding: 1vh;
-            margin-bottom: 0.5vh;
+    .nav_div {
+        @include texturOne();
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        padding-top: 1vh;
+        .nav_a {
+            margin: 1vh 3vw;
             text-decoration: none;
             display: block;
-            .nav_icon{
-                font-size: 10px;
-                color: white;
-                text-align: center;
-                margin: 0;
-                i{
-                    font-size: 6vh;
-                }
-            }
         }
-        a:hover{
-            background-image: $activegradient;
-            
-            p{
-                color: black;
-            }
+        .nav_a>p{
+            padding: 1px 0;
+        }
+        .nav_a>p:hover {
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            padding: 0;
         }
     }
-} 
+    .nav_div:after {
+        @include texturTwo();
+    }
+}
