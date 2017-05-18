@@ -3,6 +3,13 @@
     content: '';
     display: block;
 }
+@mixin line($x) {
+    background-color: $x;
+    height: 2px;
+    width: 100%;
+    box-shadow: 0px 0px 10px;
+    z-index: 10;
+}
 
 @mixin createBox($gradient) {
     padding: 10vh 5vw 10vh;

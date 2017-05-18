@@ -1,0 +1,16 @@
+.skills_line {
+    @include line (white);
+}
+
+.skill_saction {
+    position: relative;
+    width: 100%;
+    .skills {
+        height: 100vh;
+        width: 90%;
+        //background-image: url(../image/skills_bg.jpg);
+        //background-size: 100%;
+        -webkit-filter: blur(7px);
+        filter: blur(7px);
+    }
+}

@@ -25,7 +25,7 @@
 }
 .about_image_one{
                 animation-name: img;
-                animation-duration: 20s;
+                animation-duration: 50s;
                 animation-timing-function: cubic-bezier(.81,.51,.41,.93); 
                 animation-iteration-count: infinite;
                 
@@ -45,6 +45,31 @@
        background-position: 0 0;
     }
     100% {
-         background-position: 1000 0;
+         background-position: -500px 0;
+    }
+}
+.about_image_two{
+                animation-name: img_2;
+                animation-duration: 20s;
+                animation-timing-function: cubic-bezier(.81,.51,.41,.93); 
+                animation-iteration-count: infinite;
+                
+                animation-direction: alternate;
+        }
+@keyframes img_2 {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -280px;
+    }
+}
+
+@-webkit-keyframes img {
+    0% {
+       background-position: 0 0;
+    }
+    100% {
+         background-position: 0 -280px;
     }
 }

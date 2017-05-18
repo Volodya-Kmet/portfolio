@@ -1,25 +1,75 @@
-.line {
-    background-color: white;
-    height: 2px;
-    width: 100%;
-    box-shadow: 0px 0px 10px;
-    z-index: 10;
+.about_line {
+    @include line (white);
 }
 
 .about {
     width: 100%;
-    height: 92vh;
+    height: 100vh;
     @include texturOne();
     position: relative;
-    padding: 7vh 10vw 0 10vw;
-    .about_image_one {
-        height: 75vh;
-        width: 100%;
-        background-image: url(../image/about_nature_2.jpg);
-        background-size: cover;
-        border-radius: 10px;
-        -webkit-clip-path: polygon(1% 0, 100% 47%, 100% 51%, 5% 100%, 0 100%, 0 2%, 100% 49%, 0 100%, 100% 100%, 100% 0%);
-        clip-path: polygon(1% 0, 100% 47%, 100% 51%, 5% 100%, 0 100%, 0 2%, 100% 49%, 0 100%, 100% 100%, 100% 0%);
+    padding-top: 15vh;
+    .next_section {
+        transform: rotate(270deg);
+        position: absolute;
+        bottom: 25vh;
+        color: white;
+        display: flex;
+        .section_header {
+            transform: rotate(90deg);
+            font-family: logo;
+            display: flex;
+            flex-direction: column;
+            .span_about {
+                color: greenyellow;
+            }
+        }
+        .svg_little_arrov {
+            display: block;
+            background: url(../image/little_arrow.svg);
+            color: white;
+            height: 5vh;
+            width: 5vw;
+            background-size: 100% 100%;
+            margin-left: 10vh;
+        }
+        p{
+            font-size: 20px;
+            margin-left: 1vh;
+        }
+    }
+    .about_container_img {
+        position: relative;
+        .about_image_one {
+            position: absolute;
+            height: 75vh;
+            width: 100%;
+            background-image: url(../image/about_nature_2.jpg);
+            background-size: cover;
+            border-radius: 10px;
+            -webkit-clip-path: polygon(0 2%, 0 99%, 100% 48%);
+            clip-path: polygon(0 2%, 0 99%, 100% 48%);
+        }
+        .about_image_two {
+            position: absolute;
+            height: 34vh;
+            width: 100%;
+            background-image: url(../image/about_img_1.jpg);
+            background-size: cover;
+            border-radius: 10px 10px 0 0;
+            -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%);
+            clip-path: polygon(1% 0, 100% 0, 100% 100%);
+        }
+        .about_image_three {
+            position: absolute;
+            top: 38vh;
+            height: 37vh;
+            width: 100%;
+            background-image: url(../image/about_img_3.jpg);
+            background-size: cover;
+            border-radius: 0 0 10px 10px;
+            -webkit-clip-path: polygon(1% 100%, 100% 0, 100% 100%);
+            clip-path: polygon(3% 100%, 100% 0, 100% 100%);
+        }
     }
     .about_text {
         @include createBox($gradient);
