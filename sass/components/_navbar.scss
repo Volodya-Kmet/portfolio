@@ -1,9 +1,10 @@
 nav {
     position: fixed;
-    top: 0;
-    z-index: 100;
+    
+    width: 100vw;
+    z-index: 1000;
     .nav_div {
-        @include texturOne();
+        @include texturOne(black);
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -22,8 +23,5 @@ nav {
             border-top: 1px solid white;
             padding: 0;
         }
-    }
-    .nav_div:after {
-        @include texturTwo();
     }
 }

@@ -1,3 +1,31 @@
+include mixins/diagram
 .skills_line
-section.skill_saction
-    img(src="image/skills_bg.jpg").skills
+section
+    .skill_saction
+        .next_section
+            h2.section_header.span_skills my 
+                span skills
+            .svg_little_arrov
+            a
+                p View works 
+        .skill_img
+        .skills_wraper
+            .skils_container   
+                h2 TECHNICAL SKILLS
+                .skills_row
+                    
+                    +addDiagram ('JavaScript')
+                    +addDiagram ('Node.js')
+                    +addDiagram ('AngularJS')
+                    +addDiagram ('MySQL')
+                    +addDiagram ('HTML5')
+                    +addDiagram ('CSS3')
+                .skills_row
+                    +addDiagram ('JQuery')
+                    +addDiagram ('Bootstrap')
+                    +addDiagram ('Jade')
+                    +addDiagram ('SCSS')
+                    +addDiagram ('Gulp')
+                    +addDiagram ('Photoshop')
+                    
+                            

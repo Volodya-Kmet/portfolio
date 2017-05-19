@@ -1,9 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-p{
-    font-family: helvetica;
-    font-size: 16px;
-    color: white;
-}
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    p {
+        font-family: helvetica;
+        font-size: 16px;
+        color: white;
+    }
+    
+    .next_section {
+        transform: rotate(270deg);
+        position: absolute;
+        bottom: 25vh;
+        left: -7vw;
+        color: white;
+        display: flex;
+        z-index: 10;
+        .section_header {
+            transform: rotate(90deg);
+            font-family: logo;
+            display: flex;
+            flex-direction: column;
+            .span_about {
+                color: greenyellow;
+            }
+        }
+        .svg_little_arrov {
+            display: block;
+            background: url(../image/little_arrow.svg);
+            color: white;
+            height: 5vh;
+            width: 5vw;
+            background-size: 100% 100%;
+            margin-left: 10vh;
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            p {
+            font-size: 20px;
+            margin-left: 1vh;
+        }
+        }
+        
+    }

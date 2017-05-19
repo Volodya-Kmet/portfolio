@@ -3,6 +3,7 @@
     content: '';
     display: block;
 }
+
 @mixin line($x) {
     background-color: $x;
     height: 2px;
@@ -17,8 +18,8 @@
     border-radius: 20px;
 }
 
-@mixin texturOne() {
-    background-color: black;
+@mixin texturOne($x) {
+    background-color: $x;
     background-image: linear-gradient(45deg, transparent, transparent 48%, rgba(100, 100, 100, .3) 48%, rgba(100, 100, 100, .3) 52%, transparent 52%);
     background-size: 4px 4px;
 }

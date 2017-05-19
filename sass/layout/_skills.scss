@@ -5,12 +5,95 @@
 .skill_saction {
     position: relative;
     width: 100%;
-    .skills {
+    min-height: 100vh;
+    @include texturOne (silver);
+    color: black;
+    .span_skills {
+        color: greenyellow;
+        span {
+            color: white;
+        }
+    }
+    .skill_img {
+        margin-left: 12vw;
         height: 100vh;
-        width: 90%;
-        //background-image: url(../image/skills_bg.jpg);
-        //background-size: 100%;
-        -webkit-filter: blur(7px);
-        filter: blur(7px);
+        width: 45vw;
+        background-size: 100vh;
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px;
+        -moz-box-shadow: inset 0 0 10px;
+        -webkit-box-shadow: inset 0 0 10px;
+        background-image: url(../image/skills.jpg);
+    }
+    .skills_wraper {
+        padding: 12vh 0 5vh;
+        position: relative;
+        .skils_container {
+            @include createBox($gradient_white);
+            width: 40vw;
+            max-height: 80vh;
+            position: absolute;
+            left: -2vw;
+            padding: 0;
+            text-align: center;
+            -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+            .skills_row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-self: center;
+                .skill_diagram {
+                    margin: 5px;
+                    .wraper_diagram {
+                        position: relative;
+                        width: 8vw;
+                        height: 8vw;
+                        border-radius: 50%;
+                        .circleone,
+                        .circletwo {
+                            position: absolute;
+                            border-radius: 50%;
+                            height: 8vw;
+                            width: 8vw;
+                            clip: rect(0, 8vw, 8vw, 4vw);
+                            .slideone,
+                            .slidetwo {
+                                position: absolute;
+                                border-radius: 50%;
+                                height: 8vw;
+                                width: 8vw;
+                                background-color: greenyellow;
+                                clip: rect(0, 4vw, 8vw, 0);
+                                transform: rotate(0deg);
+                            }
+                            .slideone {
+                                clip: rect(0, 8vw, 8vw, 4vw);
+                            }
+                        }
+                        .circleone {
+                            clip: rect(0, 4vw, 8vw, 0);
+                        }
+                        .table {
+                            position: absolute;
+                            border-radius: 50%;
+                            height: 7.5vw;
+                            width: 7.5vw;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            align-items: center;
+                            color: dimgray
+                        }
+                    }
+                    p {
+                         color: black;
+                    }
+                }
+            }
+        }
     }
 }

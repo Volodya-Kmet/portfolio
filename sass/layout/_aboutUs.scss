@@ -1,87 +1,49 @@
 .about_line {
     @include line (white);
+    position: sticky;
 }
 
 .about {
     width: 100%;
-    height: 100vh;
-    @include texturOne();
+    min-height: 100vh;
+    @include texturOne (black);
     position: relative;
-    padding-top: 15vh;
-    .next_section {
-        transform: rotate(270deg);
-        position: absolute;
-        bottom: 25vh;
-        color: white;
+    padding: 15vh 1vw 5vh 1vw;
+    .span_about {
+        color: greenyellow;
+    }
+    .about_container {
         display: flex;
-        .section_header {
-            transform: rotate(90deg);
-            font-family: logo;
-            display: flex;
-            flex-direction: column;
-            .span_about {
-                color: greenyellow;
-            }
+        justify-content: center;
+        padding-left: 12vw;
+        .about_text {
+            @include createBox($gradient_full);
+            text-align: justify;
+            width: 60vw;
+            padding-top: 0;
+            padding-bottom: 1vw;
+            margin-top: 15vh;
+            z-index: 2;
+            -webkit-filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.7));
+            filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.7));
         }
-        .svg_little_arrov {
-            display: block;
-            background: url(../image/little_arrow.svg);
-            color: white;
-            height: 5vh;
-            width: 5vw;
-            background-size: 100% 100%;
-            margin-left: 10vh;
-        }
-        p{
-            font-size: 20px;
-            margin-left: 1vh;
-        }
-    }
-    .about_container_img {
-        position: relative;
-        .about_image_one {
-            position: absolute;
-            height: 75vh;
-            width: 100%;
-            background-image: url(../image/about_nature_2.jpg);
-            background-size: cover;
-            border-radius: 10px;
-            -webkit-clip-path: polygon(0 2%, 0 99%, 100% 48%);
-            clip-path: polygon(0 2%, 0 99%, 100% 48%);
-        }
-        .about_image_two {
-            position: absolute;
-            height: 34vh;
-            width: 100%;
-            background-image: url(../image/about_img_1.jpg);
-            background-size: cover;
-            border-radius: 10px 10px 0 0;
-            -webkit-clip-path: polygon(1% 0, 100% 0, 100% 100%);
-            clip-path: polygon(1% 0, 100% 0, 100% 100%);
-        }
-        .about_image_three {
-            position: absolute;
-            top: 38vh;
-            height: 37vh;
-            width: 100%;
-            background-image: url(../image/about_img_3.jpg);
-            background-size: cover;
-            border-radius: 0 0 10px 10px;
-            -webkit-clip-path: polygon(1% 100%, 100% 0, 100% 100%);
-            clip-path: polygon(3% 100%, 100% 0, 100% 100%);
-        }
-    }
-    .about_text {
-        @include createBox($gradient);
-        text-align: justify;
-        padding-top: 0;
-        padding-bottom: 0;
         h2 {
             padding-left: 12px;
             color: white;
         }
-        p {
-            color: white;
+    }
+    .about_img {
+        position: relative;
+        height: 100%;
+        .about_image_two {
+            position: absolute;
+            left: -5vw;
+            z-index: 1;
+            height: 80vh;
+            width: 25vw;
+            background-image: url(../image/about_img_1.jpg);
+            background-size: cover;
+            border-radius: 5px;
         }
     }
 }
