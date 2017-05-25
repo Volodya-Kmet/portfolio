@@ -1,15 +1,15 @@
 nav {
     position: fixed;
-    
+    top: 0;
     width: 100vw;
-    z-index: 1000;
+    z-index: 10;
     .nav_div {
         @include texturOne(black);
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        width: 100%;
-        padding-top: 1vh;
+        width: 99%;
+        padding: 1vh 0;
         .nav_a {
             margin: 1vh 3vw;
             text-decoration: none;

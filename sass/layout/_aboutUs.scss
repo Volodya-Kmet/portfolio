@@ -1,53 +1,74 @@
 .about_line {
     @include line (white);
-    position: sticky;
+    //Other browsers
+    position: fixed;
+    //Webkit (Chrome, Safari) Opera
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        position:sticky;
+    }
+    //Firefox
+    @media screen and (min--moz-device-pixel-ratio:0) {
+        position: sticky;
+    }
 }
 
-.about {
-    width: 100%;
-    min-height: 100vh;
+#about {
+    width: 98%;
+    height: 90vh;
     @include texturOne (black);
     position: relative;
-    padding: 15vh 1vw 5vh 1vw;
+    padding: 5vh 1vw 5vh 1vw;
+    z-index: 5;
     .span_about {
         color: greenyellow;
     }
-    .about_container {
+    .about_wrapper {
         display: flex;
         justify-content: center;
-        padding-left: 12vw;
-        .about_text {
+        .about_container {
             @include createBox($gradient_full);
             text-align: justify;
-            width: 60vw;
-            padding-top: 0;
-            padding-bottom: 1vw;
-            margin-top: 15vh;
+            width: 50vw;
+            padding: 0 1vw 1vw;
+            margin: 15vh 0 20vh 15vw;
             z-index: 2;
             -webkit-filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.7));
             filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.7));
+            h2 {
+                color: white;
+                padding: 10px 12px 0;
+                font-family: helvetica;
+            }
+            .container_container__text {
+                display: flex;
+                p {
+                    padding: 12px;
+                }
+            }
         }
-        h2 {
-            padding-left: 12px;
-            color: white;
-        }
-    }
-    .about_img {
-        position: relative;
-        height: 100%;
-        .about_image_two {
-            position: absolute;
-            left: -5vw;
-            z-index: 1;
-            height: 80vh;
+        .img_container {
+            height: 85vh;
             width: 25vw;
-            background-image: url(../image/about_img_1.jpg);
-            background-size: cover;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            top: 2vw;
+            left: -5vw;
             border-radius: 5px;
+            background-color: white;
+            .about_img {
+                height: 85vh;
+                width: 25vw;
+                transition: 0.6s ease;
+                background-size: cover;
+                background-position: center;
+                border-radius: 5px;
+                z-index: 1;
+            }
         }
     }
 }
 
-.about:after {
+#about:after {
     @include texturTwo();
 }

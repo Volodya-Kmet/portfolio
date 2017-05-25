@@ -1,9 +1,3 @@
-div {
-    float: left;
-    
-    
-    
-    &:after{
-        @include clear();
-    }
+#footer {
+    height: 100vh
 }

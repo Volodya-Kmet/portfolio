@@ -281,7 +281,7 @@ Licensed under the MIT license.
         this.delete = true;
     };
     var canvas = document.getElementById("canvas");
-    var altBG = document.getElementById("altBG");
+   
     var triangle = new TriangleBG({
         canvas: canvas
         , alternateElem: altBG
