@@ -1,9 +1,8 @@
 mixin addDiagram (text)
-    .skill_diagram
+    div(class = `skill_diagram ${text}`)
         .wraper_diagram
             .circleone
                 .slideone
             .circletwo
                 .slidetwo
-            .table.col-md-4
-        p=text
+            .table= text

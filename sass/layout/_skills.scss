@@ -31,34 +31,62 @@
     }
     .skils_wrapper {
         @include createBox($gradient_white);
-        width: 40vw;
+        //@include texturOne (inherit);
+        width: 44vw;
         max-height: 70vh;
         overflow: hidden;
         position: relative;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
+        text-align: center;
         left: -2vw;
         top: 14vh;
-        padding: 5vh 0 10vh;
-        text-align: center;
-        -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
-        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+        padding: 5vh 1vw;
         font-family: helvetica;
-        i {
-            color: greenyellow;
-            padding: 0 10px;
-            transition: 0.5s ease;
+        
+        -webkit-filter: drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.7));
+        filter: drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.7));
+        border-radius: 20px 0 0 20px;
+        h2 {
+            width: 100%;
+            text-align: center;
+            padding-bottom: 2vh;
+        }
+        .right {
+            right: 0;
+            transform: rotate(180deg);
             cursor: pointer;
         }
-        i:hover {
-            color: white
+        .svg_carusel {
+            fill: none;
+            stroke: greenyellow;
+            stroke-miterlimit: 10;
+            height: 10vh;
+            width: 10vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            margin: auto;
+            cursor: pointer;
+            transition: 0.5s;
+            polyline {
+                font-size: 100%;
+                width: 100%;
+            }
+        }
+        .svg_carusel:hover {
+            stroke: dimgray;
         }
         .radio_wraper {
             display: flex;
+            width: 100%;
             justify-content: center;
-            padding-top: 3vh;
+            padding: 5vh 14.5vw 1vh;
+            position: relative;
+            bottom: 0;
             .skills_radio {
                 cursor: pointer;
                 height: 5px;
@@ -69,66 +97,75 @@
             }
             .active,
             .skills_radio:hover {
-                background-color: white;
+                background-color: dimgray;
             }
         }
         .skills_container {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
+            justify-content: space-between;
             position: relative;
-            width: 80vw;
             .carusel {
-                width: 40vw;
+                width: 44vw;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                
-                align-items: stretch;
+                justify-content: center;
                 .skill_diagram {
-                    flex-basis: 150px;
+                    margin: 2vh;
+                    height: 150px;
+                    width: 150px;
                     text-align: center;
                     .wraper_diagram {
                         position: relative;
-                        width: 8vw;
-                        height: 8vw;
+                        width: 150px;
+                        height: 150px;
                         border-radius: 50%;
                         .circleone,
                         .circletwo {
+                            box-shadow: inset 0 0 10px -3px black; 
                             position: absolute;
                             border-radius: 50%;
-                            height: 8vw;
-                            width: 8vw;
-                            clip: rect(0, 8vw, 8vw, 4vw);
+                            height: 150px;
+                            width: 150px;
+                            clip: rect(0, 150px, 150px, 75px);
                             .slideone,
                             .slidetwo {
                                 position: absolute;
                                 border-radius: 50%;
-                                height: 8vw;
-                                width: 8vw;
+                                height: 150px;
+                                width: 150px;
                                 background-color: greenyellow;
-                                clip: rect(0, 4vw, 8vw, 0);
+                                clip: rect(0, 75px, 150px, 0);
                                 transform: rotate(0deg);
                             }
                             .slideone {
-                                clip: rect(0, 8vw, 8vw, 4vw);
+                                clip: rect(0, 150px, 150px, 75px);
                             }
                         }
                         .circleone {
-                            clip: rect(0, 4vw, 8vw, 0);
+                            clip: rect(0, 75px, 150px, 0);
                         }
                         .table {
                             position: absolute;
                             border-radius: 50%;
-                            height: 7.5vw;
-                            width: 7.5vw;
+                            height: 140px;
+                            width: 140px;
                             top: 0;
                             left: 0;
                             right: 0;
                             bottom: 0;
                             margin: auto;
                             align-items: center;
-                            color: dimgray
+                            color: white;
+                            font-weight: bold;
+                            font-size: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            @include texturOne (silver);
+                            //box-shadow: 0 0 10px -3px black;
                         }
                     }
                     p {
